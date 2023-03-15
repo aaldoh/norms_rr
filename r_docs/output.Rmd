@@ -1,0 +1,108 @@
+---
+title: "Results"
+author: "Alaa Aldoh"
+floatsintext: yes
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_depth: '5'
+    toc_float: yes
+    df_print: paged
+date: "Last compiled on `r format(Sys.time(), '%d %B, %Y')`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, autodep = TRUE, fig.path = "../figures/", dev = c('svg', 'png'))
+rmd_packages <- c("ggplot2", "papaja", "tidyverse", "kableExtra")
+lapply(rmd_packages, require, character.only = TRUE)
+no_out <- readRDS("../data/no_outliers.rds")
+clean <- readRDS("../data/clean.rds")
+load("../outputs/T1_out.RData")
+load("../outputs/T2_out.RData")
+```
+
+# Methods {.tabset .tabset-fade .tabset-pills}
+
+## Participants
+
+A total of `r participants["export"]` started the study, and `r participants["complete"]` completed the study. After excluding participants who started the study more than once (*n* = `r nrow(filter(count(clean, PROLIFIC_ID), n >1))`, total of `r nrow(filter(group_by(clean, PROLIFIC_ID), n() > 1))` cases), a total of `r participants["unique"]` cases remained. Of the `r participants["unique"]` unique participants that took part in the study, `r participants["nomiss_full"]` completed the second survey (`r round(participants["nomiss_full"]/participants["unique"]*100, 2)`% completion rate). `r participants["complete"] - participants["no_veg"]` were excluded for indicating that they were vegan or vegetarian, `r participants["no_veg"] - participants["no_care"]` were excluded for spending less than 5 seconds on the reading task, and `r participants["no_care"] - participants["no_out"]` were excluded because they were multivariate outliers. The final sample consisted of `r participants["no_out"]` participants. 
+
+## Missing data
+
+Around `r round(min(prop_missing_T2))`-`r round(max(prop_missing_T2))`% of values were missing across outcomes measured at T2.
+
+# Time 1 {.tabset .tabset-fade .tabset-pills}
+
+## Plots
+
+```{r t1-plots, fig.cap="Outcomes at T1"}
+T1_violin
+T1_interact
+T1_interact_overlaid1
+T1_interact_overlaid2
+T1_interact_overlaid3
+```
+
+## Descriptives
+```{r t1-desc}
+outcomes_T1_desc %>%
+  select(-starts_with("sd")) %>%
+  kable(digits = 2) %>%
+  kable_styling()
+```
+
+## Summary table
+
+```{r t1-table}
+kable(T1_table, 
+      caption = "Overview of results at time 1",
+      col.names = c("Outcome", "Comparison", "$b$", "$SE$", "df", "95% CI", "$t$", "$\\textit{p}$","$B_{{HN}(0, 5)}$", "RR", "Conclusion$^a$"), 
+      digits = 2) %>%
+  add_header_above(c(" " = 8, "Bayesian inference" = 3)) %>%
+  kable_styling() %>%
+  pack_rows("H1: dynamic vs static/no norm", 1, 6) %>%
+  pack_rows("H2: interaction", 7, 9) %>%
+  pack_rows("H3: text dynamic vs visual dynamic", 10, 12) %>%
+  footnote(general_title = "Note.",
+           general = paste0("CI = confidence interval; $N$ = ", nrow(no_out)),
+           alphabet = c("H~0~ = evidence for null hypothesis, no = no conclusion, H~1~ = evidence for alternative hypothesis."),
+           footnote_as_chunk = T)
+```
+
+
+# Time 2 {.tabset .tabset-fade .tabset-pills}
+
+## Plots
+```{r t2-plots}
+T2_violin
+T2_interact
+outcomes_change
+FFQ_change
+```
+
+## Descriptives
+```{r t2-desc}
+diffs_by_cond %>%
+  select(-starts_with("sd")) %>%
+  kable(digits = 2) %>%
+  kable_styling()
+```
+
+
+## Analysis
+
+```{r t2-table}
+kable(T2_table, 
+      caption = "Overview of results at time 2",
+      col.names = c("Outcome", "Comparison", "$b$", "$SE$", "df", "95% CI", "$t$", "$\\textit{p}$","$B_{{HN}}$", "RR", "Conclusion$^a$"), 
+      digits = 2) %>%
+  add_header_above(c(" " = 8, "Bayesian inference" = 3)) %>%
+  kable_styling() %>%
+  pack_rows("H1: dynamic vs static/no norm", 1, 8) %>%
+  pack_rows("H2: interaction", 9, 12) %>%
+  pack_rows("H3: text dynamic vs visual dynamic", 13, 16) %>%
+  footnote(general_title = "Note.",
+           general = paste0("CI = confidence interval; $N$ = ", nrow(no_out)),
+           alphabet = c("H0 = evidence for null hypothesis, no = no conclusion, H1 = evidence for alternative hypothesis."),
+           footnote_as_chunk = T)
+```
