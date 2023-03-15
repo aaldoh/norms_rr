@@ -1,0 +1,17 @@
+outcome,contrast,estimate,SE,df,CL,t.ratio,p.value,"unlist(T2comp_bf[3, ])",T2comp_rr,"unlist(T2comp_bf[5, ])"
+attitude_diff,stat_vs_dy,-2.22,1.47,1291,"-5.11, 0.66",-1.51,.131,0.12,"[1.65, 10]",H0
+interest_diff,stat_vs_dy,-0.42,1.17,1291,"-2.73, 1.88",-0.36,.720,0.17,"[2.5, 10]",H0
+intention_diff,stat_vs_dy,1.33,1.17,1291,"-0.96, 3.63",1.14,.254,0.71,"[0.05, 10]",no
+FFQ_meat_diff,stat_vs_dy,0.04,0.22,1222,"-0.38, 0.47",0.21,.836,0.18,"[0.55, 5]",H0
+attitude_diff,none_vs_dy,-3.59,1.85,1291,"-7.22, 0.03",-1.95,.052,0.12,"[1.65, 10]",H0
+interest_diff,none_vs_dy,-0.98,1.44,1291,"-3.81, 1.85",-0.68,.498,0.15,"[2.05, 10]",H0
+intention_diff,none_vs_dy,0.28,1.43,1291,"-2.54, 3.09",0.19,.847,0.31,"[4.6, 10]",H0
+FFQ_meat_diff,none_vs_dy,-0.21,0.27,1222,"-0.75, 0.33",-0.75,.452,0.35,"[0.05, 1.05]",no
+attitude_diff,norm_infostatic:formattext,-3.11,2.92,1289,"-8.85, 2.62",-1.06,.287,0.27,"[4, 10]",H0
+interest_diff,norm_infostatic:formattext,0.35,2.34,1289,"-4.25, 4.94",0.15,.882,0.38,"[0.05, 5.85]",no
+intention_diff,norm_infostatic:formattext,-4.56,2.31,1289,"-9.1, -0.02",-1.97,.049,0.14,"[2, 10]",H0
+FFQ_meat_diff,norm_infostatic:formattext,0.06,0.43,1220,"-0.79, 0.91",0.15,.884,0.38,"[0.05, 1.1]",no
+attitude_diff,dytext_vs_dyvis,-5.23,2.05,1289,"-9.24, -1.21",-2.55,.011,0.11,"[1.45, 10]",H0
+interest_diff,dytext_vs_dyvis,-2.29,1.61,1289,"-5.45, 0.88",-1.42,.157,0.12,"[1.65, 10]",H0
+intention_diff,dytext_vs_dyvis,-3.37,1.61,1289,"-6.54, -0.21",-2.09,.037,0.1,"[1.4, 10]",H0
+FFQ_meat_diff,dytext_vs_dyvis,-0.06,0.3,1220,"-0.66, 0.53",-0.2,.840,0.41,"[0.05, 1.25]",no

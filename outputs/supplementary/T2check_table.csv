@@ -1,0 +1,17 @@
+outcome,contrast,estimate,SE,df,CL,t.ratio,p.value,"unlist(T2check_bf[3, ])",T2check_rr,"unlist(T2check_bf[5, ])"
+attitude_diff,stat_vs_dy,-3.88,2.44,710,"-8.68, 0.92",-1.59,.113,0.19,"[2.6, 10]",H0
+interest_diff,stat_vs_dy,-0.99,1.84,710,"-4.61, 2.62",-0.54,.590,0.24,"[3.45, 10]",H0
+intention_diff,stat_vs_dy,-0.87,1.87,710,"-4.54, 2.81",-0.46,.643,0.25,"[3.7, 10]",H0
+FFQ_meat_diff,stat_vs_dy,0.27,0.34,676,"-0.39, 0.93",0.81,.420,0.19,"[0.55, 5]",H0
+attitude_diff,none_vs_dy,-4.59,1.89,710,"-8.31, -0.88",-2.43,.015,0.11,"[1.45, 10]",H0
+interest_diff,none_vs_dy,-1.5,1.42,710,"-4.3, 1.29",-1.06,.291,0.14,"[1.95, 10]",H0
+intention_diff,none_vs_dy,-0.04,1.45,710,"-2.88, 2.81",-0.02,.981,0.27,"[4, 10]",H0
+FFQ_meat_diff,none_vs_dy,-0.16,0.27,676,"-0.68, 0.36",-0.62,.538,0.44,"[0.05, 1.35]",no
+attitude_diff,norm_infostatic:formattext,-1.28,5.19,708,"-11.47, 8.92",-0.25,.806,0.63,"[0.05, 10]",no
+interest_diff,norm_infostatic:formattext,-0.82,3.92,708,"-8.52, 6.88",-0.21,.835,0.54,"[0.05, 9.3]",no
+intention_diff,norm_infostatic:formattext,-7.24,3.98,708,"-15.06, 0.57",-1.82,.069,0.26,"[3.8, 10]",H0
+FFQ_meat_diff,norm_infostatic:formattext,-0.85,0.72,677,"-2.27, 0.56",-1.18,.238,1.54,"[0.05, 5]",no
+attitude_diff,dytext_vs_dyvis,-5.73,2.21,708,"-10.08, -1.38",-2.59,.010,0.12,"[1.6, 10]",H0
+interest_diff,dytext_vs_dyvis,-2.91,1.67,708,"-6.19, 0.38",-1.74,.083,0.12,"[1.65, 10]",H0
+intention_diff,dytext_vs_dyvis,-3.64,1.7,708,"-6.97, -0.31",-2.14,.032,0.11,"[1.45, 10]",H0
+FFQ_meat_diff,dytext_vs_dyvis,0.02,0.31,674,"-0.59, 0.63",0.05,.958,0.28,"[0.85, 5]",H0

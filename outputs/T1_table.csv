@@ -1,0 +1,13 @@
+outcome,contrast,estimate,SE,df,CL,t.ratio,p.value,"unlist(T1_bf[3, ])",T1_rr,"unlist(T1_bf[5, ])"
+attitude_T1,stat_vs_dy,-1.56,1.67,1291,"-4.84, 1.72",-0.93,.351,0.17,"[2.45, 10]",H0
+interest_T1,stat_vs_dy,-1.52,1.81,1291,"-5.07, 2.02",-0.84,.399,0.2,"[2.8, 10]",H0
+intentionuni_T1,stat_vs_dy,-2.19,1.88,1291,"-5.87, 1.5",-1.16,.244,0.17,"[2.45, 10]",H0
+attitude_T1,none_vs_dy,0.3,2.07,1291,"-3.76, 4.36",0.14,.886,0.42,"[0.05, 6.55]",no
+interest_T1,none_vs_dy,-0.77,2.24,1291,"-5.16, 3.62",-0.34,.731,0.32,"[4.8, 10]",H0
+intentionuni_T1,none_vs_dy,-0.28,2.32,1291,"-4.84, 4.28",-0.12,.905,0.39,"[0.05, 5.9]",no
+attitude_T1,norm_infostatic:formattext,6.24,3.34,1289,"-0.31, 12.78",1.87,.062,3.49,"[3.25, 9.55]",H1
+interest_T1,norm_infostatic:formattext,7.5,3.61,1289,"0.42, 14.58",2.08,.038,4.6,"[2.6, 10]",H1
+intentionuni_T1,norm_infostatic:formattext,11.35,3.74,1289,"4.01, 18.69",3.03,.002,22.41,"[1.5, 10]",H1
+attitude_T1,dytext_vs_dyvis,6.7,2.36,1289,"2.07, 11.32",2.84,.005,22.81,"[1.05, 10]",H1
+interest_T1,dytext_vs_dyvis,6.91,2.55,1289,"1.91, 11.91",2.71,.007,16.54,"[1.2, 10]",H1
+intentionuni_T1,dytext_vs_dyvis,7.79,2.64,1289,"2.61, 12.98",2.95,.003,27.5,"[1.1, 10]",H1
